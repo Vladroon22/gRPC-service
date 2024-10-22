@@ -1,15 +1,15 @@
 syntax = "proto3";
 
-option go_package = "pkg/proto/";
+option go_package = "github.com/Vladroon22/gRPC-service/pkg/proto;proto";
 
-service Translater {
-    rpc Translate(Request) returns (Response) {}
+service Server {
+    rpc BroadCast(ClientText) returns (ServerText) {}
 }
 
-message Request {
-    string query = 1;
+message ClientText {
+    string text = 1;
 }
 
-message Response {
+message ServerText {
     string response = 1;
 }
