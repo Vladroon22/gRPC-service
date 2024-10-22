@@ -1,6 +1,8 @@
 syntax = "proto3";
 
-option go_package = "github.com/Vladroon22/gRPC-service/pkg/proto;proto";
+package proto
+
+option go_package = "pkg/proto;proto";
 
 service Server {
     rpc BroadCast(ClientText) returns (ServerText) {}
